@@ -9,17 +9,29 @@ import SwiftUI
 
 struct PostsList: View {
     @State private var searchText = ""
-    private var posts = [Post.testPost]
+    @State private var showNewPostForm = false
+    @StateObject var viewModel = PostsViewModel()
     
     var body: some View {
         NavigationView {
-            List(posts) { post in
+            List(viewModel.posts) { post in
                 if searchText.isEmpty || post.containts(searchText) {
                     PostRow(post: post)
                 }
             }
             .searchable(text: $searchText)
             .navigationTitle("Posts")
+            .toolbar {
+                Button {
+                    showNewPostForm = true
+                } label: {
+                    Label("New Post", systemImage: "square.and.pencil")
+                }
+
+            }
+        }
+        .sheet(isPresented: $showNewPostForm) {
+            NewPostForm(createAction: viewModel.makeCreateAction())
         }
     }
 }
