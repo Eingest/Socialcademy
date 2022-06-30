@@ -7,13 +7,14 @@
 
 import Foundation
 
-//Mainactor -> Update the PVM only from the main thread -> prevents bugs and undefined behavior
+//Mainactor -> Update the PostsViewModel only from the main thread -> prevents bugs and undefined behavior
 @MainActor
 class PostsViewModel: ObservableObject {
     @Published var posts = [Post.testPost]
     
     func makeCreateAction() -> NewPostForm.CreateAction {
         return { [weak self] post in
+            try await PostsRepository.create(post)
             self?.posts.insert(post, at: 0)
         }
     }

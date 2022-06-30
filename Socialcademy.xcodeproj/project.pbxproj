@@ -19,6 +19,7 @@
 		C330802C286A32FD003DA8E5 /* PostRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330802B286A32FD003DA8E5 /* PostRow.swift */; };
 		C330802E286B442C003DA8E5 /* NewPostForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330802D286B442C003DA8E5 /* NewPostForm.swift */; };
 		C3308031286B4A42003DA8E5 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308030286B4A42003DA8E5 /* PostsViewModel.swift */; };
+		C3308034286DF48A003DA8E5 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308033286DF48A003DA8E5 /* PostsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C330802B286A32FD003DA8E5 /* PostRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRow.swift; sourceTree = "<group>"; };
 		C330802D286B442C003DA8E5 /* NewPostForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostForm.swift; sourceTree = "<group>"; };
 		C3308030286B4A42003DA8E5 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		C3308033286DF48A003DA8E5 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +69,11 @@
 		C330800C286A27AA003DA8E5 /* Socialcademy */ = {
 			isa = PBXGroup;
 			children = (
-				C330802F286B4A1C003DA8E5 /* View Models */,
 				C330800D286A27AA003DA8E5 /* SocialcademyApp.swift */,
+				C330802F286B4A1C003DA8E5 /* View Models */,
 				C3308026286A2D4F003DA8E5 /* Models */,
 				C3308024286A2C9C003DA8E5 /* Views */,
+				C3308032286DF467003DA8E5 /* Repositories */,
 				C3308025286A2CA7003DA8E5 /* Resources */,
 			);
 			path = Socialcademy;
@@ -118,6 +121,14 @@
 				C3308030286B4A42003DA8E5 /* PostsViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		C3308032286DF467003DA8E5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C3308033286DF48A003DA8E5 /* PostsRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +212,7 @@
 			files = (
 				C3308028286A2D67003DA8E5 /* Post.swift in Sources */,
 				C330800E286A27AA003DA8E5 /* SocialcademyApp.swift in Sources */,
+				C3308034286DF48A003DA8E5 /* PostsRepository.swift in Sources */,
 				C3308031286B4A42003DA8E5 /* PostsViewModel.swift in Sources */,
 				C330802C286A32FD003DA8E5 /* PostRow.swift in Sources */,
 				C330802A286A30E7003DA8E5 /* PostsList.swift in Sources */,
