@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Post: Identifiable, Codable {
+struct Post: Identifiable, Equatable, Codable {
     var title: String
     var content: String
     var authorName: String
     var timestamp = Date()
     var id = UUID()
     
-    func containts(_ string: String) -> Bool {
+    func contains(_ string: String) -> Bool {
         let properties = [title, content, authorName].map { $0.lowercased() }
         let query = string.lowercased()
         
@@ -26,7 +26,7 @@ struct Post: Identifiable, Codable {
 extension Post {
     static let testPost = Post(
         title: "Lorem ipsum",
-        content: "Lorem ipsum dolor sit amet, conectetut adipiscing elit, sed do eiusmod tempor nicdidunt ut labore et dolore magna aliqua.",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         authorName: "Jamie Harris"
     )
 }

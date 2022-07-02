@@ -10,12 +10,14 @@ import SwiftUI
 // MARK: - NewPostForm
 
 struct NewPostForm: View {
+    typealias CreateAction = (Post) async throws -> Void
+    
+    let createAction: CreateAction
+    
     @State private var post = Post(title: "", content: "", authorName: "")
     @State private var state = FormState.idle
-    @Environment(\.dismiss) private var dismiss
     
-    typealias CreateAction = (Post) async throws -> Void
-    let createAction: CreateAction
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationView {
@@ -28,9 +30,6 @@ struct NewPostForm: View {
                     TextEditor(text: $post.content)
                         .multilineTextAlignment(.leading)
                 }
-                //                Button("Create Post", action: {
-                //                    createPost()
-                //                })
                 Button(action: createPost) {
                     if state == .working {
                         ProgressView()
@@ -67,7 +66,7 @@ struct NewPostForm: View {
     }
 }
 
-// MARK: - Formstate
+// MARK: - FormState
 
 private extension NewPostForm {
     enum FormState {
