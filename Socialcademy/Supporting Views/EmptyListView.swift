@@ -40,7 +40,7 @@ struct EmptyListView_Previews: PreviewProvider {
     static var previews: some View {
         EmptyListView(
             title: "Cannot Load Posts",
-            message: "Something went wring while loading posts. Please check your Internet connection.",
+            message: "Something went wrong while loading posts. Please check your Internet connection.",
             retryAction: {}
         )
         EmptyListView(

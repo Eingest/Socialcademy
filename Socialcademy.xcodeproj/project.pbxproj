@@ -22,6 +22,8 @@
 		C3308034286DF48A003DA8E5 /* PostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308033286DF48A003DA8E5 /* PostsRepository.swift */; };
 		C330803728707112003DA8E5 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330803628707112003DA8E5 /* Loadable.swift */; };
 		C330803A28707861003DA8E5 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330803928707861003DA8E5 /* EmptyListView.swift */; };
+		C330803C287C8E63003DA8E5 /* Alert+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330803B287C8E63003DA8E5 /* Alert+Error.swift */; };
+		C330803E287F2931003DA8E5 /* PostRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330803D287F2931003DA8E5 /* PostRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		C3308033286DF48A003DA8E5 /* PostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRepository.swift; sourceTree = "<group>"; };
 		C330803628707112003DA8E5 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		C330803928707861003DA8E5 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
+		C330803B287C8E63003DA8E5 /* Alert+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Error.swift"; sourceTree = "<group>"; };
+		C330803D287F2931003DA8E5 /* PostRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C3308030286B4A42003DA8E5 /* PostsViewModel.swift */,
+				C330803D287F2931003DA8E5 /* PostRowViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C330803928707861003DA8E5 /* EmptyListView.swift */,
+				C330803B287C8E63003DA8E5 /* Alert+Error.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C330803E287F2931003DA8E5 /* PostRowViewModel.swift in Sources */,
 				C3308028286A2D67003DA8E5 /* Post.swift in Sources */,
 				C330800E286A27AA003DA8E5 /* SocialcademyApp.swift in Sources */,
 				C3308034286DF48A003DA8E5 /* PostsRepository.swift in Sources */,
@@ -239,6 +246,7 @@
 				C330802C286A32FD003DA8E5 /* PostRow.swift in Sources */,
 				C330803728707112003DA8E5 /* Loadable.swift in Sources */,
 				C330802A286A30E7003DA8E5 /* PostsList.swift in Sources */,
+				C330803C287C8E63003DA8E5 /* Alert+Error.swift in Sources */,
 				C330802E286B442C003DA8E5 /* NewPostForm.swift in Sources */,
 				C330803A28707861003DA8E5 /* EmptyListView.swift in Sources */,
 			);
