@@ -31,6 +31,7 @@
 		C330804C288461F9003DA8E5 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330804B288461F9003DA8E5 /* AuthView.swift */; };
 		C330804E28847178003DA8E5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330804D28847178003DA8E5 /* ProfileView.swift */; };
 		C3308050288474E9003DA8E5 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330804F288474E9003DA8E5 /* FormViewModel.swift */; };
+		C33080522885D5D8003DA8E5 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33080512885D5D8003DA8E5 /* PrimaryButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C330804B288461F9003DA8E5 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		C330804D28847178003DA8E5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C330804F288474E9003DA8E5 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		C33080512885D5D8003DA8E5 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				C330803928707861003DA8E5 /* EmptyListView.swift */,
 				C330803B287C8E63003DA8E5 /* Alert+Error.swift */,
+				C33080512885D5D8003DA8E5 /* PrimaryButtonStyle.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C33080522885D5D8003DA8E5 /* PrimaryButtonStyle.swift in Sources */,
 				C330803E287F2931003DA8E5 /* PostRowViewModel.swift in Sources */,
 				C3308028286A2D67003DA8E5 /* Post.swift in Sources */,
 				C330800E286A27AA003DA8E5 /* SocialcademyApp.swift in Sources */,

@@ -12,6 +12,7 @@ import Foundation
 class FormViewModel<Value>: ObservableObject {
     typealias Action = (Value) async throws -> Void
     
+    @Published var isWorking = false
     @Published var value: Value
     @Published var error: Error?
     
@@ -28,12 +29,14 @@ class FormViewModel<Value>: ObservableObject {
     }
     
     private func handleSubmit() async {
+        isWorking = true
         do {
             try await action(value)
         } catch {
             print("[FormViewModel] Cannot submit: \(error)")
             self.error = error
         }
+        isWorking = false 
     }
     
     nonisolated func submit() {
