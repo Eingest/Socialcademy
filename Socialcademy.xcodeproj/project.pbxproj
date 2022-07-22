@@ -37,6 +37,11 @@
 		C3308058288B1AC7003DA8E5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308057288B1AC7003DA8E5 /* Comment.swift */; };
 		C330805A288B1BD6003DA8E5 /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308059288B1BD6003DA8E5 /* CommentsRepository.swift */; };
 		C330805C288B1D7E003DA8E5 /* Firestore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */; };
+		C330805E288B2085003DA8E5 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330805D288B2085003DA8E5 /* CommentsViewModel.swift */; };
+		C3308060288B2170003DA8E5 /* CommentsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330805F288B2170003DA8E5 /* CommentsList.swift */; };
+		C3308062288B223E003DA8E5 /* CommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308061288B223E003DA8E5 /* CommentRow.swift */; };
+		C3308064288B2569003DA8E5 /* CommentRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308063288B2569003DA8E5 /* CommentRowViewModel.swift */; };
+		C3308066288B2668003DA8E5 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308065288B2668003DA8E5 /* ErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +72,11 @@
 		C3308057288B1AC7003DA8E5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		C3308059288B1BD6003DA8E5 /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
 		C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Extensions.swift"; sourceTree = "<group>"; };
+		C330805D288B2085003DA8E5 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		C330805F288B2170003DA8E5 /* CommentsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsList.swift; sourceTree = "<group>"; };
+		C3308061288B223E003DA8E5 /* CommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRow.swift; sourceTree = "<group>"; };
+		C3308063288B2569003DA8E5 /* CommentRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRowViewModel.swift; sourceTree = "<group>"; };
+		C3308065288B2668003DA8E5 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +144,8 @@
 				C330803F287F44FE003DA8E5 /* MainTabView.swift */,
 				C330804B288461F9003DA8E5 /* AuthView.swift */,
 				C330804D28847178003DA8E5 /* ProfileView.swift */,
+				C330805F288B2170003DA8E5 /* CommentsList.swift */,
+				C3308061288B223E003DA8E5 /* CommentRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +178,8 @@
 				C3308049288460EC003DA8E5 /* AuthViewModel.swift */,
 				C330804F288474E9003DA8E5 /* FormViewModel.swift */,
 				C33080552886FE5C003DA8E5 /* ViewModelFactory.swift */,
+				C330805D288B2085003DA8E5 /* CommentsViewModel.swift */,
+				C3308063288B2569003DA8E5 /* CommentRowViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -184,6 +198,7 @@
 			children = (
 				C330803628707112003DA8E5 /* Loadable.swift */,
 				C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */,
+				C3308065288B2668003DA8E5 /* ErrorHandler.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -294,17 +309,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33080522885D5D8003DA8E5 /* PrimaryButtonStyle.swift in Sources */,
+				C3308066288B2668003DA8E5 /* ErrorHandler.swift in Sources */,
 				C330805A288B1BD6003DA8E5 /* CommentsRepository.swift in Sources */,
 				C330803E287F2931003DA8E5 /* PostRowViewModel.swift in Sources */,
 				C3308028286A2D67003DA8E5 /* Post.swift in Sources */,
+				C3308064288B2569003DA8E5 /* CommentRowViewModel.swift in Sources */,
+				C3308062288B223E003DA8E5 /* CommentRow.swift in Sources */,
 				C330800E286A27AA003DA8E5 /* SocialcademyApp.swift in Sources */,
 				C3308034286DF48A003DA8E5 /* PostsRepository.swift in Sources */,
 				C3308031286B4A42003DA8E5 /* PostsViewModel.swift in Sources */,
 				C330802C286A32FD003DA8E5 /* PostRow.swift in Sources */,
 				C330804628845853003DA8E5 /* AuthService.swift in Sources */,
+				C3308060288B2170003DA8E5 /* CommentsList.swift in Sources */,
 				C330803728707112003DA8E5 /* Loadable.swift in Sources */,
 				C330804E28847178003DA8E5 /* ProfileView.swift in Sources */,
 				C3308058288B1AC7003DA8E5 /* Comment.swift in Sources */,
+				C330805E288B2085003DA8E5 /* CommentsViewModel.swift in Sources */,
 				C330802A286A30E7003DA8E5 /* PostsList.swift in Sources */,
 				C330803C287C8E63003DA8E5 /* Alert+Error.swift in Sources */,
 				C330804A288460EC003DA8E5 /* AuthViewModel.swift in Sources */,
