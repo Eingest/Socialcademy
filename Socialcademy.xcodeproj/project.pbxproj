@@ -34,6 +34,9 @@
 		C33080522885D5D8003DA8E5 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33080512885D5D8003DA8E5 /* PrimaryButtonStyle.swift */; };
 		C33080542885E318003DA8E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33080532885E318003DA8E5 /* User.swift */; };
 		C33080562886FE5C003DA8E5 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33080552886FE5C003DA8E5 /* ViewModelFactory.swift */; };
+		C3308058288B1AC7003DA8E5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308057288B1AC7003DA8E5 /* Comment.swift */; };
+		C330805A288B1BD6003DA8E5 /* CommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308059288B1BD6003DA8E5 /* CommentsRepository.swift */; };
+		C330805C288B1D7E003DA8E5 /* Firestore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		C33080512885D5D8003DA8E5 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		C33080532885E318003DA8E5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C33080552886FE5C003DA8E5 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		C3308057288B1AC7003DA8E5 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		C3308059288B1BD6003DA8E5 /* CommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsRepository.swift; sourceTree = "<group>"; };
+		C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 			children = (
 				C3308027286A2D67003DA8E5 /* Post.swift */,
 				C33080532885E318003DA8E5 /* User.swift */,
+				C3308057288B1AC7003DA8E5 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				C3308033286DF48A003DA8E5 /* PostsRepository.swift */,
+				C3308059288B1BD6003DA8E5 /* CommentsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				C330803628707112003DA8E5 /* Loadable.swift */,
+				C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33080522885D5D8003DA8E5 /* PrimaryButtonStyle.swift in Sources */,
+				C330805A288B1BD6003DA8E5 /* CommentsRepository.swift in Sources */,
 				C330803E287F2931003DA8E5 /* PostRowViewModel.swift in Sources */,
 				C3308028286A2D67003DA8E5 /* Post.swift in Sources */,
 				C330800E286A27AA003DA8E5 /* SocialcademyApp.swift in Sources */,
@@ -294,6 +304,7 @@
 				C330804628845853003DA8E5 /* AuthService.swift in Sources */,
 				C330803728707112003DA8E5 /* Loadable.swift in Sources */,
 				C330804E28847178003DA8E5 /* ProfileView.swift in Sources */,
+				C3308058288B1AC7003DA8E5 /* Comment.swift in Sources */,
 				C330802A286A30E7003DA8E5 /* PostsList.swift in Sources */,
 				C330803C287C8E63003DA8E5 /* Alert+Error.swift in Sources */,
 				C330804A288460EC003DA8E5 /* AuthViewModel.swift in Sources */,
@@ -301,6 +312,7 @@
 				C330804C288461F9003DA8E5 /* AuthView.swift in Sources */,
 				C330802E286B442C003DA8E5 /* NewPostForm.swift in Sources */,
 				C3308050288474E9003DA8E5 /* FormViewModel.swift in Sources */,
+				C330805C288B1D7E003DA8E5 /* Firestore+Extensions.swift in Sources */,
 				C330803A28707861003DA8E5 /* EmptyListView.swift in Sources */,
 				C3308040287F44FE003DA8E5 /* MainTabView.swift in Sources */,
 				C33080542885E318003DA8E5 /* User.swift in Sources */,

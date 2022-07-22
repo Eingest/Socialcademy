@@ -1,10 +1,3 @@
-//
-//  FormViewModel.swift
-//  Socialcademy
-//
-//  Created by Andreas Kiesel on 17.07.22.
-//
-
 import Foundation
 
 @MainActor
@@ -12,9 +5,9 @@ import Foundation
 class FormViewModel<Value>: ObservableObject {
     typealias Action = (Value) async throws -> Void
     
-    @Published var isWorking = false
     @Published var value: Value
     @Published var error: Error?
+    @Published var isWorking = false
     
     subscript<T>(dynamicMember keyPath: WritableKeyPath<Value, T>) -> T {
         get { value[keyPath: keyPath] }
@@ -28,20 +21,20 @@ class FormViewModel<Value>: ObservableObject {
         self.action = action
     }
     
+    nonisolated func submit() {
+        Task {
+            await handleSubmit()
+        }
+    }
+    
     private func handleSubmit() async {
         isWorking = true
         do {
             try await action(value)
         } catch {
-            print("[FormViewModel] Cannot submit: \(error)")
+            print("[FormViewModel] Cannot submit: \(error)")
             self.error = error
         }
-        isWorking = false 
-    }
-    
-    nonisolated func submit() {
-        Task {
-            await handleSubmit()
-        }
+        isWorking = false
     }
 }

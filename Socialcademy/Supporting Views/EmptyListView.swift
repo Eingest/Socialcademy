@@ -2,7 +2,7 @@
 //  EmptyListView.swift
 //  Socialcademy
 //
-//  Created by Andreas Kiesel on 02.07.22.
+//  Created by John Royal on 1/9/22.
 //
 
 import SwiftUI
@@ -21,12 +21,11 @@ struct EmptyListView: View {
             Text(message)
             if let retryAction = retryAction {
                 Button(action: retryAction) {
-                    Text("Try again")
+                    Text("Try Again")
                         .padding(10)
                         .background(RoundedRectangle(cornerRadius: 5).stroke(Color.secondary))
                 }
                 .padding(.top)
-                
             }
         }
         .font(.subheadline)
@@ -45,6 +44,7 @@ struct EmptyListView_Previews: PreviewProvider {
         )
         EmptyListView(
             title: "No Posts",
-            message: "There aren't any posts yet.")
+            message: "There aren’t any posts yet."
+        )
     }
 }

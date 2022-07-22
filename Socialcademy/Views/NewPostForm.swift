@@ -1,15 +1,4 @@
-//
-//  NewPostView.swift
-//  Socialcademy
-//
-//  Created by Andreas Kiesel on 28.06.22.
-//
-
 import SwiftUI
-
-// MARK: - NewPostForm
-
-// UPDATING THE POSTS VIEW MODEL AND POSTS LIST (BISSL WENIGER ALS HÄLFTE)
 
 struct NewPostForm: View {
     @StateObject var viewModel: FormViewModel<Post>
@@ -42,16 +31,14 @@ struct NewPostForm: View {
             .onSubmit(viewModel.submit)
             .navigationTitle("New Post")
         }
-        .disabled(viewModel.isWorking)
         .alert("Cannot Create Post", error: $viewModel.error)
+        .disabled(viewModel.isWorking)
         .onChange(of: viewModel.isWorking) { isWorking in
-            guard !isWorking, viewModel.error == nil else { return }
+            guard !isWorking else { return }
             dismiss()
         }
     }
 }
-
-// MARK: - Preview
 
 struct NewPostForm_Previews: PreviewProvider {
     static var previews: some View {

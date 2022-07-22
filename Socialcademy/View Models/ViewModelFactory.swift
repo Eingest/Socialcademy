@@ -1,10 +1,3 @@
-//
-//  ViewModelFactory.swift
-//  Socialcademy
-//
-//  Created by Andreas Kiesel on 19.07.22.
-//
-
 import Foundation
 
 @MainActor

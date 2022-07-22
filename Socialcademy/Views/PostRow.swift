@@ -1,22 +1,16 @@
-//
-//  PostRow.swift
-//  Socialcademy
-//
-//  Created by Andreas Kiesel on 27.06.22.
-//
-
 import SwiftUI
 
+// MARK: - PostRow
+
 struct PostRow: View {
-    @State private var showConfirmationDialog = false
     @ObservedObject var viewModel: PostRowViewModel
+    
+    @State private var showConfirmationDialog = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Text(viewModel.author.name)
-                    .font(.subheadline)
-                    .fontWeight(.medium)
+                AuthorView(author: viewModel.author)
                 Spacer()
                 Text(viewModel.timestamp.formatted(date: .abbreviated, time: .omitted))
                     .font(.caption)
@@ -27,19 +21,21 @@ struct PostRow: View {
                 .fontWeight(.semibold)
             Text(viewModel.content)
             HStack {
-                FavoriteButton(isFavorite: viewModel.isFavorite, action: { viewModel.favoritePost()
+                FavoriteButton(isFavorite: viewModel.isFavorite, action: {
+                    viewModel.favoritePost()
                 })
                 Spacer()
-                Button(role: .destructive, action: {
-                    showConfirmationDialog = true
-                }) {
-                    Label("Delete", systemImage: "trash")
+                if viewModel.canDeletePost {
+                    Button(role: .destructive, action: {
+                        showConfirmationDialog = true
+                    }) {
+                        Label("Delete", systemImage: "trash")
+                    }
                 }
             }
             .labelStyle(.iconOnly)
-            .buttonStyle(.borderless)
         }
-        .padding(.vertical)
+        .padding()
         .confirmationDialog("Are you sure you want to delete this post?", isPresented: $showConfirmationDialog, titleVisibility: .visible) {
             Button("Delete", role: .destructive, action: {
                 viewModel.deletePost()
@@ -47,9 +43,29 @@ struct PostRow: View {
         }
         .alert("Error", error: $viewModel.error)
     }
-    
-    
 }
+
+// MARK: - AuthorView
+
+private extension PostRow {
+    struct AuthorView: View {
+        let author: User
+        
+        @EnvironmentObject private var factory: ViewModelFactory
+        
+        var body: some View {
+            NavigationLink {
+                PostsList(viewModel: factory.makePostsViewModel(filter: .author(author)))
+            } label: {
+                Text(author.name)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+            }
+        }
+    }
+}
+
+// MARK: - FavoriteButton
 
 private extension PostRow {
     struct FavoriteButton: View {
@@ -70,10 +86,12 @@ private extension PostRow {
     }
 }
 
+// MARK: - Preview
+
 struct PostRow_Previews: PreviewProvider {
     static var previews: some View {
-        List {
-            PostRow(viewModel: PostRowViewModel(post: Post.testPost, deleteAction: {}, favoriteAction: {}))
-        }
+        PostRow(viewModel: PostRowViewModel(post: Post.testPost, deleteAction: {}, favoriteAction: {}))
+            .environmentObject(ViewModelFactory.preview)
+            .previewLayout(.sizeThatFits)
     }
 }

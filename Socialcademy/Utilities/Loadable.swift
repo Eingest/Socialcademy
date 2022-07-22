@@ -2,7 +2,7 @@
 //  Loadable.swift
 //  Socialcademy
 //
-//  Created by Andreas Kiesel on 02.07.22.
+//  Created by John Royal on 1/9/22.
 //
 
 import Foundation

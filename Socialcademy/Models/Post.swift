@@ -1,19 +1,12 @@
-//
-//  Post.swift
-//  Socialcademy
-//
-//  Created by Andreas Kiesel on 27.06.22.
-//
-
 import Foundation
 
-struct Post: Identifiable, Equatable, Codable {
+struct Post: Identifiable, Equatable {
     var title: String
     var content: String
     var author: User
+    var isFavorite = false
     var timestamp = Date()
     var id = UUID()
-    var isFavorite = false 
     
     func contains(_ string: String) -> Bool {
         let properties = [title, content, author.name].map { $0.lowercased() }
@@ -21,6 +14,12 @@ struct Post: Identifiable, Equatable, Codable {
         
         let matches = properties.filter { $0.contains(query) }
         return !matches.isEmpty
+    }
+}
+
+extension Post: Codable {
+    enum CodingKeys: CodingKey {
+        case title, content, author, timestamp, id
     }
 }
 
