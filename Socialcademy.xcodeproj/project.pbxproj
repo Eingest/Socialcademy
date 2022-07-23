@@ -42,6 +42,9 @@
 		C3308062288B223E003DA8E5 /* CommentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308061288B223E003DA8E5 /* CommentRow.swift */; };
 		C3308064288B2569003DA8E5 /* CommentRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308063288B2569003DA8E5 /* CommentRowViewModel.swift */; };
 		C3308066288B2668003DA8E5 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308065288B2668003DA8E5 /* ErrorHandler.swift */; };
+		C3308084288C39F7003DA8E5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C3308083288C39F7003DA8E5 /* FirebaseStorage */; };
+		C3308086288C3AD6003DA8E5 /* StorageFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308085288C3AD6003DA8E5 /* StorageFile.swift */; };
+		C3308088288C3DFD003DA8E5 /* ImagePickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3308087288C3DFD003DA8E5 /* ImagePickerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,8 @@
 		C3308061288B223E003DA8E5 /* CommentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRow.swift; sourceTree = "<group>"; };
 		C3308063288B2569003DA8E5 /* CommentRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRowViewModel.swift; sourceTree = "<group>"; };
 		C3308065288B2668003DA8E5 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		C3308085288C3AD6003DA8E5 /* StorageFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFile.swift; sourceTree = "<group>"; };
+		C3308087288C3DFD003DA8E5 /* ImagePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,7 @@
 				C330801D286A294D003DA8E5 /* FirebaseAnalytics in Frameworks */,
 				C330801F286A294D003DA8E5 /* FirebaseFirestore in Frameworks */,
 				C3308021286A294D003DA8E5 /* FirebaseFirestoreSwift in Frameworks */,
+				C3308084288C39F7003DA8E5 /* FirebaseStorage in Frameworks */,
 				C330804328845524003DA8E5 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,6 +205,7 @@
 				C330803628707112003DA8E5 /* Loadable.swift */,
 				C330805B288B1D7E003DA8E5 /* Firestore+Extensions.swift */,
 				C3308065288B2668003DA8E5 /* ErrorHandler.swift */,
+				C3308085288C3AD6003DA8E5 /* StorageFile.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -209,6 +216,7 @@
 				C330803928707861003DA8E5 /* EmptyListView.swift */,
 				C330803B287C8E63003DA8E5 /* Alert+Error.swift */,
 				C33080512885D5D8003DA8E5 /* PrimaryButtonStyle.swift */,
+				C3308087288C3DFD003DA8E5 /* ImagePickerButton.swift */,
 			);
 			path = "Supporting Views";
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 				C330801E286A294D003DA8E5 /* FirebaseFirestore */,
 				C3308020286A294D003DA8E5 /* FirebaseFirestoreSwift */,
 				C330804228845524003DA8E5 /* FirebaseAuth */,
+				C3308083288C39F7003DA8E5 /* FirebaseStorage */,
 			);
 			productName = Socialcademy;
 			productReference = C330800A286A27AA003DA8E5 /* Socialcademy.app */;
@@ -319,9 +328,11 @@
 				C3308034286DF48A003DA8E5 /* PostsRepository.swift in Sources */,
 				C3308031286B4A42003DA8E5 /* PostsViewModel.swift in Sources */,
 				C330802C286A32FD003DA8E5 /* PostRow.swift in Sources */,
+				C3308088288C3DFD003DA8E5 /* ImagePickerButton.swift in Sources */,
 				C330804628845853003DA8E5 /* AuthService.swift in Sources */,
 				C3308060288B2170003DA8E5 /* CommentsList.swift in Sources */,
 				C330803728707112003DA8E5 /* Loadable.swift in Sources */,
+				C3308086288C3AD6003DA8E5 /* StorageFile.swift in Sources */,
 				C330804E28847178003DA8E5 /* ProfileView.swift in Sources */,
 				C3308058288B1AC7003DA8E5 /* Comment.swift in Sources */,
 				C330805E288B2085003DA8E5 /* CommentsViewModel.swift in Sources */,
@@ -467,6 +478,7 @@
 				DEVELOPMENT_TEAM = 7679FU48BK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -497,6 +509,7 @@
 				DEVELOPMENT_TEAM = 7679FU48BK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -570,6 +583,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C330801B286A294D003DA8E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		C3308083288C39F7003DA8E5 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C330801B286A294D003DA8E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
